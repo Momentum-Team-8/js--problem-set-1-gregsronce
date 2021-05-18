@@ -48,11 +48,19 @@ function celsiusToFahrenheit(num) {
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
-function fahrenheitToKelvin 
+function fahrenheitToKelvin(Fah_temp){
+    return fahrenheitToCelsius(Fah_temp) + 273.15
+}  
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
-
+function lesser(x, y){
+    if (x > y) {
+        return y
+    } else {
+        return x
+    }
+}
 // 10. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
 // in the specified language. The supported languages and their
@@ -64,7 +72,19 @@ function fahrenheitToKelvin
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-
+function multigreeting(name, langCode) {
+    if (langCode === 'en') {
+        return 'Hello, ' + name + '!'
+    } else if (langCode === 'es') {
+        return '¡' + 'Hola, ' + name + '!'
+    } else if (langCode === 'fr') {
+        return 'Bonjour, ' + name + '!'
+    } else if (langCode === 'eo') {
+        return 'Saluton, ' + name + '!'
+    } else {
+        return undefined
+    }
+}
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
 // example, the greatest common divisor of 24 and 81 is 3. The greatest common divisor of
@@ -91,3 +111,4 @@ function fahrenheitToKelvin
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
