@@ -48,8 +48,8 @@ function celsiusToFahrenheit(num) {
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
-function fahrenheitToKelvin(Fah_temp){
-    return fahrenheitToCelsius(Fah_temp) + 273.15
+function fahrenheitToKelvin(F){
+    return fahrenheitToCelsius(F) + 273.15
 }  
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
@@ -72,14 +72,14 @@ function lesser(x, y){
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-function multigreeting(name, langCode) {
-    if (langCode === 'en') {
+function multigreeting(name, lang) {
+    if (lang === 'en') {
         return 'Hello, ' + name + '!'
-    } else if (langCode === 'es') {
+    } else if (lang === 'es') {
         return '¡' + 'Hola, ' + name + '!'
-    } else if (langCode === 'fr') {
+    } else if (lang === 'fr') {
         return 'Bonjour, ' + name + '!'
-    } else if (langCode === 'eo') {
+    } else if (lang === 'eo') {
         return 'Saluton, ' + name + '!'
     } else {
         return undefined
