@@ -48,8 +48,8 @@ function celsiusToFahrenheit(num) {
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
-function fahrenheitToKelvin(F){
-    return fahrenheitToCelsius(F) + 273.15
+function fahrenheitToKelvin(fahTemp){
+    return fahrenheitToCelsius(fahTemp) + 273.15
 }  
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
@@ -72,14 +72,14 @@ function lesser(x, y){
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-function multigreeting(name, lang) {
-    if (lang === 'en') {
+function multigreeting(name, langCode) {
+    if (langCode === 'en') {
         return 'Hello, ' + name + '!'
-    } else if (lang === 'es') {
+    } else if (langCode === 'es') {
         return '¡' + 'Hola, ' + name + '!'
-    } else if (lang === 'fr') {
+    } else if (langCode === 'fr') {
         return 'Bonjour, ' + name + '!'
-    } else if (lang === 'eo') {
+    } else if (langCode === 'eo') {
         return 'Saluton, ' + name + '!'
     } else {
         return undefined
@@ -113,14 +113,14 @@ function multigreeting(name, lang) {
 // divisor using the instructions above.
 function gcd(a, b) {
     let d = 0
-    while (a  % 2 === 0 && b % 2 === 0) {
+    while (isEven(a) && isEven(b)) {
         a = a/2
         b = b/2
         d = d + 1
     } while (a !== b) {
-    if (a % 2 === 0) {
+    if (isEven(a)) {
     a = a/2
-    } else if (b % 2 === 0) {
+    } else if (isEven(b)) {
         b = b/2
     } else if (a > b) {
         a = (a - b)/2
